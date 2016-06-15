@@ -1,0 +1,343 @@
+/*
+  Project Name: Puppy World
+  Client: GA Front-End Development Final Project
+  Author: Dawn E Robles
+  Developer @GA in DTLA
+*/
+
+/* Box Model */
+*, *:before, *:after {
+     -moz-box-sizing: inherit; /* Firexfox */
+     -webkit-box-sizing: inherit; /* Safari/Chrome/iOS/Android */
+     box-sizing: inherit; /* IE */
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.alignLeft {
+  float: left;
+}
+
+.alignRight {
+  float: right;
+}
+
+body {
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 22px;
+  color: white;
+  background-color: black;
+  min-width: 14em;
+}
+
+header {
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  /*height: 120px;*/
+  height: 20%;
+  position: fixed;
+  background-color: #185E35;
+  box-shadow: 0px 1px 20px #444;
+  border-bottom: 4px solid #EC0786;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header nav {
+  text-align: center;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+header nav ul li {
+  transition: background-color 0.2s ease-in-out;
+  /*height: 120px;*/
+  height: 5.45em;
+  float: right;
+  position: relative;
+}
+
+header nav ul li:hover {
+  background-color: #4FA165;
+  text-transform: uppercase;
+}
+
+header nav ul li a {
+  color: #CCBF5B;
+  /*padding: 39px;*/
+  padding: 1.09em;
+  display: block;
+  font-size: 0.91em;
+  text-decoration: none;
+}
+
+#imgLogo {
+  width: auto;
+  height: 4.5em;
+  float: left;
+  /*padding: 15px;*/
+  padding: 0.68em;
+}
+
+header h1 {
+  margin: 1.14em 0 0 0;
+  float: left;
+  color: yellow;
+  font-family: 'Gochi Hand', cursive;
+  font-weight:800;
+  font-size: 1.5em;
+}
+
+
+.container {
+  display: none;
+  position: relative;
+  z-index: 1;
+  /*margin: 10px auto;
+  padding: 10px 15px;*/
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: .6; 
+  z-index: -1;
+  background: url('../images/bg.png') repeat-y center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+}
+
+/*main body div*/
+/*section#banner {
+  overflow: hidden;
+  padding: 3%;
+  border-bottom: 4px solid #FFFF00;
+}*/
+
+/* quotation / subheader */
+aside.quotes {
+  font-family: 'Fontdiner Swanky', cursive;
+  text-align: center;
+  margin: 0;
+  padding: 1em 3%;
+  font-size: 0.81em;
+  line-height: 1em;
+  border-top: 4px solid #FFFF00;
+  -webkit-text-fill-color: #FFF400; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: gray;
+}
+
+section {
+  color: black;
+  /*height: calc(100% - 200px); /* ~minus hdr & ftr~ */
+}
+
+section div {
+  background: rgba(255,255,255,.6);
+  width: 55%;
+  margin: 0 auto;
+  padding: 8px 1%;
+  float: right;
+  box-shadow: 0 0 5px rgba(0,0,0,.5);
+  line-height: 25px;
+}
+
+section h2 {
+  font-size: 1.27em;
+  font-weight: bold;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  /*height: 100px;*/
+  height: 15%;
+  position: fixed;
+  background-color: #185E35;
+  box-shadow: 0px 1px 20px #444;
+  border-top: 4px solid #EC0786;
+  text-align: center;
+  font-size: 0.73em;
+}
+
+
+/* additional styles...*/
+
+#indexPage {
+  width: 100%;
+  /*minus header and footers fix val*/
+  height: calc(100% - 35%);
+  /*margin-top: 4.54em;*/
+  padding: 0.3em;
+  position: relative;
+}
+
+.bg-images {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.toggle-images {
+  top: 0;
+  left: 0;
+  /*width: 100%;*/
+  /*height: 625px;*/
+  /*minus header and footers fix val*/
+  height: calc(100% - 200px);
+  padding-bottom: 0;
+  position: absolute;
+  transition: opacity 1s ease-in;
+}
+
+.img1 {
+  opacity: 0;
+  z-index: -5;
+  background-image: url('../images/breeds/alaskan-malamute-1.jpg');
+}
+
+.img2 {
+  z-index: -4;
+  background-image: url('../images/breeds/Bulldog-1.jpg');
+}
+
+.img3 {
+  z-index: -3;
+  background-image: url('../images/breeds/ChowChow-2.jpg');
+}
+
+.img4 {
+  z-index: -2;
+  background-image: url('../images/breeds/Corgi-2.jpg');
+}
+
+.img5 {
+  z-index: -1;
+  background-image: url('../images/breeds/Finnish-Spitz-1.jpg');
+}
+
+.img1.show {
+  opacity: 1;
+}
+
+.show {
+  opacity: 1;
+}
+
+
+/* ~for nav on mobile~ */
+
+
+
+/* ~different screen size~ */
+
+@media screen and (max-width: 816px) {
+  header nav ul li a {
+  color: #CCBF5B;
+  padding: 1.09em;
+  display: block;
+  font-size: 0.82em;
+  text-decoration: none;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+ 
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    height: 20%;
+    position: absolute;
+    background-color: #185E35;
+    box-shadow: 0px 1px 20px #444;
+    border-bottom: 4px solid #EC0786;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #imgLogo {
+    max-width: 3.27em;
+    max-height: 4.5em;
+    float: left;
+    padding: 0.5em;
+  }
+
+  #hdrNav a {
+    display: block;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 0.15em 0.75em;
+    margin-top: 0.5em;
+  }
+
+  #hdrNav li:not(:first-child) {
+    float: none;
+    width: 90%; /*stretch the dropdown to make it inline*/
+  }
+
+  #hdrNav li:first-child {
+    display: block;
+    position: absolute;
+    top: 0.4em;
+    right: 0.25em;
+  }
+
+  .line {
+    font-size: 1em;
+    background-color: #f9e42e;
+    border: 1px solid #f9e42e;
+    height: 3px;
+    width: 3em;
+    margin: 0.1em;
+  }
+
+  header ul {
+    transition: all 1s;
+    height: 0em;
+  }
+
+
+  .slide {
+    height: 20em;
+  }
+
+  header h1 {
+    margin: 25px 0 0 0;
+    float: left;
+    color: yellow;
+    font-family: 'Gochi Hand', cursive;
+    font-weight:800;
+    font-size: 1em;
+  }
+
+  footer {
+   display: none;
+  }
+
+}
