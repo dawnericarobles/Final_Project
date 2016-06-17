@@ -117,6 +117,15 @@ header h1 {
   color: #F2C509;
 }
 
+h2 {
+  font-family: 'Gochi Hand', cursive;
+  font-weight:800;
+  font-size: 1.65em;
+  margin-top: 0.25em;
+  text-shadow: 2px 2px #F2C509;
+  color: #437C5B;
+  text-align: center;
+}
 
 /* ~index/home layout~ this should have changing images */
 #index-Page {
@@ -144,17 +153,16 @@ header h1 {
   display: block;
   background-color: #CBFCE1;
   margin: 1em 1.25em 1.5em;  
-  height: 430px;
-  padding: 1em;
+  height: inherit;
+  padding: 1em 1em 2em;
   color: black;
-  border-radius: 1em;
+  border-radius: 0.75em;
   box-shadow: 0 0.043em 0.87em #444;
 }
 
-
 #breeds img {
   float: right;
-  margin: 0.75em;  
+  margin: 0.75em;
   max-width: 350px;
 }
 
@@ -186,39 +194,7 @@ header h1 {
   display: none;
 }
 
-.alaskan {
-  background-image: url(../images/alaskan-malamute-1.jpg)
-}
-.siberian {
-  background-image: url(../images/Siberian-Husky-2.jpg)
-}
-.samoyed {
-  background-image: url(../images/Samoyed-2.jpg)
-}
-.shiba {
-  background-image: url(../images/Shiba-inu-1.jpg)
-}
-.pitbull {
-  background-image: url(../images/Pitbull-1.jpg)
-}
-.bulldog {
-  background-image: url(../images/Bulldog-1.jpg)
-}
-.sbernard {
-  background-image: url(../images/Saint-Bernard-1.jpg)
-}
-.cchow {
-  background-image: url(../images/ChowChow-2.jpg)
-}
-.golden {
-  background-image: url(../images/Golden-Retriever-1.jpg)
-}
-.finnish {
-  background-image: url(../images/Finnish-Spitz-1.jpg)
-}
-.german {
-  background-image: url(../images/German-Shepherd-1.jpg)
-}
+
 
 /* ~footer layout~ */
 footer {
@@ -226,13 +202,14 @@ footer {
   left: 0;
   z-index: 10;
   width: 100%;
-  height: 12%;
+  height: 8%;
   position: fixed;
   background-color: #185E35;
   box-shadow: 0px 1px 20px #444;
   border-top: 4px solid #EC0786;
   text-align: center;
   font-size: 0.73em;
+  padding-bottom: 0.25em;
 }
 
 

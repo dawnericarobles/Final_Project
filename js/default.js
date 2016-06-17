@@ -79,11 +79,14 @@ $(document).ready(function() {
 
 	function displayInfo() {
 		var breed = $("#dog-type").val(); //get the selected val on change
+		var tempBreed = "../Final_Project/images/breeds2/puppy";
+		tempBreed = tempBreed + breed + ".jpg";
 
-		// if (breed != "0") {
-		// 	$("#imgDog").attr("class","imgDisplay");
-		// }
+		if (breed != "0") {
+			$("#imgDog").attr("src", tempBreed);
+		}
 
+		console.log(tempBreed);
 		event.preventDefault();
 	}
 
