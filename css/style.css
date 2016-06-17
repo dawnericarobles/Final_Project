@@ -32,31 +32,47 @@
   float: right;
 }
 
-body {
-  font-family: 'Bubblegum Sans', cursive;
-  font-size: 22px;
-  color: white;
-  background-color: black;
-  min-width: 14em;
+.main-mid {
+  width: 950px;
+  height: 500px;
 }
 
+body {
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 23px;
+  line-height: 1.043em;
+  color: #fff;
+  background-color: #437C5B;
+  min-width: 14em;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.spacer {
+  height: 3em;
+}
+/* ~header layout~ */
 header {
   top: 0;
   left: 0;
   z-index: 10;
   width: 100%;
-  /*height: 120px;*/
-  height: 20%;
+  height: 16%;
   position: fixed;
   background-color: #185E35;
-  box-shadow: 0px 1px 20px #444;
-  border-bottom: 4px solid #EC0786;
-  width: 100%;
-  margin: 0 auto;
+  box-shadow: 0 0.043em 0.87em #444;
+  border-bottom: 0.17em;
+  display: block;
 }
 
 header nav {
-  text-align: center;
+  float: right;
+  margin-top: 0.58em;
 }
 
 header nav ul {
@@ -66,11 +82,10 @@ header nav ul {
 }
 
 header nav ul li {
-  transition: background-color 0.2s ease-in-out;
-  /*height: 120px;*/
-  height: 5.45em;
-  float: right;
-  position: relative;
+  /*transition: background-color 0.2s ease-in-out;*/
+  display: inline-block;
+  margin: 0 0 0 1.54em;
+  font-size: 0.92em;
 }
 
 header nav ul li:hover {
@@ -79,120 +94,41 @@ header nav ul li:hover {
 }
 
 header nav ul li a {
-  color: #CCBF5B;
-  /*padding: 39px;*/
+  color: #F2C509;
   padding: 1.09em;
-  display: block;
   font-size: 0.91em;
   text-decoration: none;
 }
 
 #imgLogo {
   width: auto;
-  height: 4.5em;
+  height: 3.48em;
   float: left;
-  /*padding: 15px;*/
   padding: 0.68em;
 }
 
 header h1 {
-  margin: 1.14em 0 0 0;
-  float: left;
-  color: yellow;
   font-family: 'Gochi Hand', cursive;
   font-weight:800;
   font-size: 1.5em;
+  line-height: 1.6em;
+  margin: 1.14em 0 0 0;
+  float: left;
+  color: #F2C509;
 }
 
 
-.container {
-  display: none;
-  position: relative;
-  z-index: 1;
-  /*margin: 10px auto;
-  padding: 10px 15px;*/
-}
-
-.container::before {
-  content: "";
-  position: absolute;
+/* ~index/home layout~ this should have changing images */
+#index-Page {
+  padding-top: 4em;
   width: 100%;
-  height: 100%;
-  opacity: .6; 
-  z-index: -1;
-  background: url('../images/bg.png') repeat-y center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;  
+  margin: 0.08em auto 0;
+  /*height: 500px;*/
 }
 
-/*main body div*/
-/*section#banner {
-  overflow: hidden;
-  padding: 3%;
-  border-bottom: 4px solid #FFFF00;
-}*/
-
-/* quotation / subheader */
-aside.quotes {
-  font-family: 'Fontdiner Swanky', cursive;
-  text-align: center;
-  margin: 0;
-  padding: 1em 3%;
-  font-size: 0.81em;
-  line-height: 1em;
-  border-top: 4px solid #FFFF00;
-  -webkit-text-fill-color: #FFF400; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: gray;
-}
-
-section {
-  color: black;
-  /*height: calc(100% - 200px); /* ~minus hdr & ftr~ */
-}
-
-section div {
-  background: rgba(255,255,255,.6);
-  width: 55%;
-  margin: 0 auto;
-  padding: 8px 1%;
-  float: right;
-  box-shadow: 0 0 5px rgba(0,0,0,.5);
-  line-height: 25px;
-}
-
-section h2 {
-  font-size: 1.27em;
-  font-weight: bold;
-}
-
-footer {
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  /*height: 100px;*/
-  height: 15%;
-  position: fixed;
-  background-color: #185E35;
-  box-shadow: 0px 1px 20px #444;
-  border-top: 4px solid #EC0786;
-  text-align: center;
-  font-size: 0.73em;
-}
-
-
-/* additional styles...*/
-
-#indexPage {
-  width: 100%;
-  /*minus header and footers fix val*/
-  height: calc(100% - 35%);
-  /*margin-top: 4.54em;*/
-  padding: 0.3em;
-  position: relative;
+#index-Page img {
+  max-width: 950px;
+  max-height: 500px;
 }
 
 .bg-images {
@@ -202,54 +138,104 @@ footer {
   background-position: center center;
 }
 
-.toggle-images {
-  top: 0;
+
+/* ~mid other divs layout~ this should be hidden depending on the clicked link */
+#videos, #breeds, #contactUs, #aboutUs {
+  display: block;
+  background-color: #CBFCE1;
+  margin: 1em 1.25em 1.5em;  
+  height: 430px;
+  padding: 1em;
+  color: black;
+  border-radius: 1em;
+  box-shadow: 0 0.043em 0.87em #444;
+}
+
+
+#breeds img {
+  float: right;
+  margin: 0.75em;  
+  max-width: 350px;
+}
+
+.vleft {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 1em;
+}
+
+.vright {
+  width: 60%;
+  display: inline-block;
+  margin-right: 0.77em;
+  margin-left: 1.53em;
+  vertical-align: top;
+}
+
+.vright iframe {
+  border: none;
+  overflow: hidden;
+}
+
+.imgDisplay {
+  display: block;
+}
+
+.imgHidden {
+  display: none;
+}
+
+.alaskan {
+  background-image: url(../images/alaskan-malamute-1.jpg)
+}
+.siberian {
+  background-image: url(../images/Siberian-Husky-2.jpg)
+}
+.samoyed {
+  background-image: url(../images/Samoyed-2.jpg)
+}
+.shiba {
+  background-image: url(../images/Shiba-inu-1.jpg)
+}
+.pitbull {
+  background-image: url(../images/Pitbull-1.jpg)
+}
+.bulldog {
+  background-image: url(../images/Bulldog-1.jpg)
+}
+.sbernard {
+  background-image: url(../images/Saint-Bernard-1.jpg)
+}
+.cchow {
+  background-image: url(../images/ChowChow-2.jpg)
+}
+.golden {
+  background-image: url(../images/Golden-Retriever-1.jpg)
+}
+.finnish {
+  background-image: url(../images/Finnish-Spitz-1.jpg)
+}
+.german {
+  background-image: url(../images/German-Shepherd-1.jpg)
+}
+
+/* ~footer layout~ */
+footer {
+  bottom: 0;
   left: 0;
-  /*width: 100%;*/
-  /*height: 625px;*/
-  /*minus header and footers fix val*/
-  height: calc(100% - 200px);
-  padding-bottom: 0;
-  position: absolute;
-  transition: opacity 1s ease-in;
-}
-
-.img1 {
-  opacity: 0;
-  z-index: -5;
-  background-image: url('../images/breeds/alaskan-malamute-1.jpg');
-}
-
-.img2 {
-  z-index: -4;
-  background-image: url('../images/breeds/Bulldog-1.jpg');
-}
-
-.img3 {
-  z-index: -3;
-  background-image: url('../images/breeds/ChowChow-2.jpg');
-}
-
-.img4 {
-  z-index: -2;
-  background-image: url('../images/breeds/Corgi-2.jpg');
-}
-
-.img5 {
-  z-index: -1;
-  background-image: url('../images/breeds/Finnish-Spitz-1.jpg');
-}
-
-.img1.show {
-  opacity: 1;
-}
-
-.show {
-  opacity: 1;
+  z-index: 10;
+  width: 100%;
+  height: 12%;
+  position: fixed;
+  background-color: #185E35;
+  box-shadow: 0px 1px 20px #444;
+  border-top: 4px solid #EC0786;
+  text-align: center;
+  font-size: 0.73em;
 }
 
 
-/* ~for nav on mobile~ */
 
 
 

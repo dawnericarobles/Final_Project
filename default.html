@@ -12,55 +12,92 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 	<header>
-	 		<a href="#index">
-	 			<img id="imgLogo" src="images/puppy-world.png" border="0" alt="Puppy World">
-	 		</a>
-	 		<h1>Puppy World</h1>
-	 	
-		<nav id="navMain">
-			<ul id="hdrNav">
-				<li id="liToggle">
-					<div class="line"></div>
-					<div class="line"></div>
-					<div class="line"></div>
-					<div class="line"></div>
-				</li>
-				<li><a href="#videos">Videos</a></li>
-				<li><a href="#breeds">Breeds</a></li>
-				<li><a href="#contactUs">Contact Us</a></li>
-				<li><a href="#aboutUs">About Us</a></li>
-			</ul>
+	  <div class="container">
+	   <div class="alignLeft">
+		 <a href="#index">
+ 			<img id="imgLogo" src="images/puppy-world.png" border="0" alt="Puppy World"></a>
+ 		 <h1>Puppy World</h1>
+	   </div>
+
+		<nav>
+		  <ul id="hdr-Nav">
+			<li id="li-Toggle">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</li>
+			<li><a href="#videos">Videos</a></li>
+			<li><a href="#breeds">Breeds</a></li>
+			<li><a href="#contactUs">Contact Us</a></li>
+			<li><a href="#aboutUs">About Us</a></li>
+		  </ul>
 		</nav>
 
-
+	  </div>
 	</header>
 	
-	<div id="indexPage">
-		<br><br><br><br><br>TEST TEST TEST 
-		<div class="bg-images toggle-images img1 show"></div>
-	    <div class="bg-images toggle-images img2"></div>
-	    <div class="bg-images toggle-images img3"></div>
-	    <div class="bg-images toggle-images img4"></div>
-	    <div class="bg-images toggle-images img5"></div>
+
+	<div class="container">
+		<div id="index-Page">
+			<center>
+			 <img src="images/bg.png" alt="Puppy World">
+			</center>
+			<!-- <div class="bg-images img1 show"></div>
+		    <div class="bg-images img2"></div>
+		    <div class="bg-images img3"></div>
+		    <div class="bg-images img4"></div>
+		    <div class="bg-images img5"></div> -->
+		</div>
+
+
+		<section id="videos">
+			<div class="vleft">
+				<select id="ddVideos">
+					<option value="0">Funny videos...</option>
+				</select>
+
+			</div>
+
+			<div class="vright">
+
+				<iframe src="#" width="400" height="400" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true" visible="false" class="imgHidden" id="vid1"></iframe>
+				
+			</div>
+		</section>
+
+		<section id="breeds">
+			<select id="dog-type">
+				<option value="0">Select a Breed</option>
+			</select>
+			<br>
+
+			<article>
+				Try-hard literally keytar, godard green juice meh ugh forage biodiesel fanny pack photo booth irony. Butcher austin semiotics echo park blue bottle aesthetic, gluten-free wayfarers fashion axe art party locavore. 
+				<img src="images/bg.png" alt="dog" id="imgDog">
+				<!-- <div class=""></div> -->
+				Umami jean shorts brunch mustache, bespoke blog pour-over crucifix iPhone letterpress XOXO ethical. Four dollar toast pinterest organic, fanny pack man bun cardigan occupy.
+
+				Try-hard literally keytar, godard green juice meh ugh forage biodiesel fanny pack photo booth irony. Butcher austin semiotics echo park blue bottle aesthetic, gluten-free wayfarers fashion axe art party locavore. Umami jean shorts brunch mustache, bespoke blog pour-over crucifix iPhone letterpress XOXO ethical. Four dollar toast pinterest organic, fanny pack man bun cardigan occupy.
+			</article>
+
+		</section>
+
+
+		<section id="contactUs">
+			Mixtape iPhone lumbersexual stumptown +1 umami. Skateboard stumptown cronut, chambray ugh organic keffiyeh before they sold out keytar. Retro mlkshk authentic, cliche kinfolk actually man braid kickstarter fixie twee raw denim gastropub franzen mixtape hella. Mustache tumblr biodiesel, vinyl bespoke pickled green juice skateboard post-ironic keffiyeh brunch pour-over pitchfork whatever tofu. Locavore cornhole asymmetrical venmo, jean shorts migas four dollar toast. Scenester single-origin coffee distillery, semiotics ugh cardigan 3 wolf moon banjo. Brooklyn green juice crucifix direct trade health goth, forage pug.
+		</section>
+
+		<section id="aboutUs">
+			Franzen gastropub wolf, schlitz vice echo park kickstarter vegan venmo etsy you probably haven't heard of them godard leggings farm-to-table. Literally man bun single-origin coffee tilde, tousled dreamcatcher ugh chia seitan affogato PBR&B schlitz next level shabby chic YOLO. Vegan tumblr 90's, blog ramps synth art party skateboard readymade beard. Squid ennui four loko, kinfolk before they sold out truffaut typewriter 90's blog helvetica hashtag ramps vice. Sartorial ramps chicharrones occupy everyday carry, gluten-free irony keffiyeh scenester bitters try-hard franzen gastropub letterpress paleo. Marfa bushwick fashion axe cornhole keytar, cronut aesthetic sustainable mlkshk synth. Tacos deep v tousled, sartorial freegan wolf authentic scenester 3 wolf moon you probably haven't heard of them mumblecore.
+		</section>
+
 	</div>
 
-
-	<section id="videos">
-		<br>
-	</section>
-
-	<section id="breeds">
-		<br>
-	</section>
-
-	<section id="contactUs">
-		<br>
-	</section>
-
-	<section id="aboutUs">
-		<br>
-	</section>
+	<div class="spacer">
+	</div>
 
 	<footer>
 		<p>&copy; Puppy world. Made with heart.<p>
