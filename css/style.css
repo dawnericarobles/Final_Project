@@ -131,13 +131,14 @@ h2 {
 #index-Page {
   padding-top: 4em;
   width: 100%;
-  margin: 0.08em auto 0;
-  /*height: 500px;*/
+  margin: 1em auto 0;
+  height: 550px;
 }
 
 #index-Page img {
-  max-width: 950px;
+  max-width: 900px;
   max-height: 500px;
+  margin: 0 auto;
 }
 
 .bg-images {
@@ -194,6 +195,81 @@ h2 {
   display: none;
 }
 
+/*FOR IMAGE SLIDE SHOW*/ 
+.css-carousel {
+   overflow: hidden;
+   margin: 1em auto;
+ }
+ 
+.css-carousel .css-img {
+   border-radius: 15px;
+   width: 90%;
+   height: 90%;
+   max-width: 90%;
+   position: absolute;
+   opacity:0;
+   -webkit-animation-name: css-animation-fade;
+   -webkit-animation-duration:15s;
+   -webkit-animation-iteration-count: infinite;
+   -moz-animation-name: css-animation-fade;
+   -moz-animation-duration:15s;
+   -moz-animation-iteration-count: infinite;
+   animation-name: css-animation-fade;
+   animation-duration:15s;
+   animation-iteration-count: infinite;
+  }
+ 
+ 
+ .css-carousel .css-img:nth-child(2) {
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s;
+  }
+ 
+ .css-carousel .css-img:nth-child(3) {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    animation-delay: 6s;
+  }
+  
+ .css-carousel .css-img:nth-child(4) {
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    animation-delay: 9s;
+  }
+  
+ .css-carousel .css-img:nth-child(5) {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    animation-delay: 12s;
+  }
+  
+ /* Chrome, Safari, Opera */ 
+ @-webkit-keyframes css-animation-fade {
+   from { opacity: 0; } 
+   5% { opacity: 1; } 
+   15% { opacity: 1; } 
+   20% { opacity: 0; } 
+   to { opacity: 0; } 
+  }
+
+/* mozilla */ 
+ @-moz-keyframes css-animation-fade {
+   from { opacity: 0; } 
+   5% { opacity: 1; } 
+   15% { opacity: 1; } 
+   20% { opacity: 0; } 
+   to { opacity: 0; } 
+  }
+
+/*standard*/
+ @keyframes css-animation-fade {
+   from { opacity: 0; } 
+   5% { opacity: 1; } 
+   15% { opacity: 1; } 
+   20% { opacity: 0; } 
+   to { opacity: 0; } 
+  }
 
 
 /* ~footer layout~ */
