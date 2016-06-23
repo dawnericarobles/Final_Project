@@ -133,14 +133,16 @@ h2 {
   width: 100%;
   margin: 1em auto 0;
   height: 550px;
+  display: block;
+  position: inherit;
 }
 
-#index-Page img {
+/*#index-Page img {
   max-width: 900px;
   max-height: 500px;
   margin: 0 auto;
 }
-
+*/
 .bg-images {
   position: relative;
   background-size: cover;
@@ -151,10 +153,11 @@ h2 {
 
 /* ~mid other divs layout~ this should be hidden depending on the clicked link */
 #videos, #breeds, #contactUs, #aboutUs {
-  display: block;
+  display: none;
+  /*display: block;*/
   background-color: #CBFCE1;
   margin: 1em 1.25em 1.5em;  
-  height: inherit;
+  /*height: inherit;*/
   padding: 1em 1em 2em;
   color: black;
   border-radius: 0.75em;
@@ -199,37 +202,46 @@ h2 {
 .css-carousel {
    overflow: hidden;
    margin: 1em auto;
+   display: block;
  }
  
 .css-carousel .css-img {
+   display: block;
+   margin: 0 auto;
    border-radius: 15px;
    width: 90%;
-   height: 90%;
-   max-width: 90%;
+   height: 70%;
    position: absolute;
    opacity:0;
    -webkit-animation-name: css-animation-fade;
-   -webkit-animation-duration:15s;
+   -webkit-animation-duration:12s;
    -webkit-animation-iteration-count: infinite;
    -moz-animation-name: css-animation-fade;
-   -moz-animation-duration:15s;
+   -moz-animation-duration:12s;
    -moz-animation-iteration-count: infinite;
    animation-name: css-animation-fade;
-   animation-duration:15s;
+   animation-duration:12s;
    animation-iteration-count: infinite;
+   box-shadow: 0 0.043em 0.87em #444;
   }
  
  
- .css-carousel .css-img:nth-child(2) {
-    -webkit-animation-delay: 3s;
-    -moz-animation-delay: 3s;
-    animation-delay: 3s;
+ .css-carousel .css-img:nth-child(1) {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+
+  .css-carousel .css-img:nth-child(2) {
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    animation-delay: 4s;
   }
  
  .css-carousel .css-img:nth-child(3) {
-    -webkit-animation-delay: 6s;
-    -moz-animation-delay: 6s;
-    animation-delay: 6s;
+    -webkit-animation-delay: 7s;
+    -moz-animation-delay: 7s;
+    animation-delay: 7s;
   }
   
  .css-carousel .css-img:nth-child(4) {

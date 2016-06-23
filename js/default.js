@@ -1,18 +1,50 @@
 
 $(document).ready(function() {
+
   $("liToggle").click(function(){
       $("hdrNav").toggleClass("slide");
   });
 
+
+  $("#aVid").click(function(){
+	  // if (window.location.href.indexOf("videos") > -1) {
+	  // 	console.log("found video on link");
+	  // }
+	  $("#videos").show();
+	  $("#breeds").hide();
+	  $("#contactUs").hide();
+	  $("#aboutUs").hide();
+  });
+  $("#aBreed").click(function(){
+  	  $("#videos").hide();
+	  $("#breeds").show();
+	  $("#contactUs").hide();
+	  $("#aboutUs").hide();
+  });
+  $("#aContact").click(function(){
+  	  $("#videos").hide();
+	  $("#breeds").hide();
+	  $("#contactUs").show();
+	  $("#aboutUs").hide();
+  });
+  $("#aboutUs").click(function(){
+  	  $("#videos").hide();
+	  $("#breeds").hide();
+	  $("#contactUs").hide();
+	  $("#aboutUs").show();
+  });
+
+// ~POPULATE DROPDOWN ON PAGE LOAD~
   	var tmpVideolists = [];
   	tmpVideolists.push("Bulldogs vs Plastic Bag");
   	tmpVideolists.push("Chowchow learning how to swim");
-  	tmpVideolists.push("When bae's trying to argue");
+  	tmpVideolists.push("Savage corgi attack");
   	tmpVideolists.push("Husky fighting a balloon");
   	tmpVideolists.push("I won't let you get drunk!");
   	tmpVideolists.push("Bob Marley the Pug");
   	tmpVideolists.push("F-r-i-e-n-d-s");
   	tmpVideolists.push("Pug Panda Panda ");
+  	tmpVideolists.push("Me whenever I see a dog");
 
   	for (var i = 0; i < tmpVideolists.length; i++) {
 		var tempVid = tmpVideolists[i];
@@ -28,13 +60,12 @@ $(document).ready(function() {
 		var tempBreed = dogBreeds[i];
 		$('#dog-type').append($("<option></option>").attr("value",i+1).text(tempBreed));
 	}
+// ~END POPULATE DROPDOWN ON PAGE LOAD~
 
-	
+
 	$("#ddVideos").change(displayVideo);
 	$("#dog-type").change(displayInfo);
 
-
-//	event.preventDefault();
 
 	function displayVideo() {
 		var video = $("#ddVideos").val(); //get the selected val on change
@@ -51,7 +82,7 @@ $(document).ready(function() {
 			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FAwwstation%2Fvideos%2F1761859490699692%2F&show_text=0&width=400");
 		} 
 		else if (video == "3") {  
-			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fawvvhouse%2Fvideos%2F514980292039012%2F&show_text=0&width=560");
+			$("#vid1").attr("src","https://www.youtube.com/embed/gHh1oogfdO8");
 		} 
 		else if (video == "4") { 
 			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fawsmanimals%2Fvideos%2F705110626295493%2F&show_text=0&width=400");
@@ -67,6 +98,9 @@ $(document).ready(function() {
 		} 
 		else if (video == "8") { 
 			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fitsdougthepug%2Fvideos%2F1085139598237532%2F&show_text=0&width=400");
+		} 
+		else if (video == "9") { 
+			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FBuzzFeedAnimals%2Fvideos%2F1232887433399916%2F&show_text=0&width=400");
 		} 
 		else {
 			$("#vid1").attr("src","");
@@ -86,7 +120,7 @@ $(document).ready(function() {
 			$("#imgDog").attr("src", tempBreed);
 		}
 
-		console.log(tempBreed);
+		// console.log(tempBreed);
 		event.preventDefault();
 	}
 
