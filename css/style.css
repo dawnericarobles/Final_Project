@@ -32,9 +32,18 @@
   float: right;
 }
 
-.main-mid {
-  width: 950px;
-  height: 500px;
+.spacer {
+  height: 20em; /* almost same as the header*/
+}
+
+.shadow {
+  -webkit-box-shadow: 0 0.043em 0.87em #444;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    0 0.043em 0.87em #444;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         0 0.043em 0.87em #444;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+#blankx {
+  display: none;
 }
 
 body {
@@ -44,8 +53,16 @@ body {
   color: #fff;
   background-color: #437C5B;
   min-width: 14em;
-  max-width: 1300px;
+  max-width: 1250px;
   margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2 {
+  margin: 0.5em 0;
 }
 
 .container {
@@ -53,10 +70,12 @@ body {
   margin: 0 auto;
 }
 
-.spacer {
-  /*height: 3em;*/
-  height: 16%; /*same as the header*/
+.logo {
+  font-size: 1.85em;
+  font-weight: 800;
 }
+
+
 /* ~header layout~ */
 header {
   top: 0;
@@ -68,101 +87,96 @@ header {
   background-color: #185E35;
   box-shadow: 0 0.043em 0.87em #444;
   border-bottom: 0.17em;
+  padding: 0.25em;
+  margin: 0 auto 0.20em;
   display: block;
+  /*overflow: hidden;*/
 }
 
-header nav {
-  float: right;
-  margin-top: 0.58em;
-}
-
-header nav ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-header nav ul li {
-  /*transition: background-color 0.2s ease-in-out;*/
-  display: inline-block;
-  margin: 0 0 0 1.54em;
-  font-size: 0.92em;
-}
-
-header nav ul li:hover {
-  background-color: #4FA165;
-  text-transform: uppercase;
-}
-
-header nav ul li a {
+header .logo {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 1.35em;
+  font-weight:800;
   color: #F2C509;
-  padding: 1.09em;
-  font-size: 0.91em;
-  text-decoration: none;
+  float: left;
 }
 
-#imgLogo {
+header #imgLogo {
   width: auto;
   height: 3.48em;
   float: left;
   padding: 0.68em;
 }
 
-header h1 {
-  font-family: 'Gochi Hand', cursive;
-  font-weight:800;
-  font-size: 1.5em;
-  line-height: 1.6em;
-  margin: 1.14em 0 0 0;
-  float: left;
+header nav {
+  float: right;
+  margin: 0.58em 3em 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin: 0 0 0 1.54em;
+  font-size: 0.92em;
+}
+
+header nav ul li a {
   color: #F2C509;
 }
 
-h2 {
-  font-family: 'Gochi Hand', cursive;
-  font-weight:800;
-  font-size: 1.65em;
-  margin-top: 0.25em;
-  text-shadow: 2px 2px #F2C509;
-  color: #437C5B;
-  text-align: center;
-}
-
-/* ~index/home layout~ this should have changing images */
 #index-Page {
-  padding-top: 4em;
-  width: 100%;
-  margin: 1em auto 0;
-  height: 550px;
   display: block;
-  position: inherit;
+  margin: 1em auto;
+  vertical-align: top;  
+  height: 500px;
 }
 
-/*#index-Page img {
-  max-width: 900px;
-  max-height: 500px;
-  margin: 0 auto;
-}
-*/
-.bg-images {
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+iframe {
+  border: none;
+  overflow: hidden;
+  max-height: 380px;
+  vertical-align: top;
 }
 
+.imgDisplay {
+  display: block;
+}
 
-/* ~mid other divs layout~ this should be hidden depending on the clicked link */
-#videos, #breeds, #contactUs, #aboutUs {
+.imgHidden {
   display: none;
-  /*display: block;*/
-  background-color: #CBFCE1;
-  margin: 1em 1.25em 1.5em;  
-  /*height: inherit;*/
-  padding: 1em 1em 2em;
-  color: black;
-  border-radius: 0.75em;
-  box-shadow: 0 0.043em 0.87em #444;
+}
+
+select {
+  overflow: hidden;
+  padding:0.14em;
+  border-radius: 0.87em;
+  cursor:pointer;
+}
+
+select > option {
+   background: black;
+   color: #FF418E;
+   padding-left: 0.2em;
+}
+
+select > option:first-child {
+  font-size: small;
+}
+
+
+.solid-border {
+  border-radius: 0.88em;
+  border: 0.045em solid #8EB09C;
+  padding: 0 1.25em 0.75em;
+  background: #55896B;
+}
+
+#videos, #breeds, #contact {
+  padding-top: 6em;
+}
+
+#about {
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 
 #breeds img {
@@ -174,57 +188,120 @@ h2 {
 }
 
 .vleft {
-  width: 30%;
+  width: 40%;
   display: inline-block;
   vertical-align: top;
   margin-left: 1em;
 }
 
 .vright {
-  width: 60%;
+  width: 50%;
   display: inline-block;
   margin-right: 0.77em;
   margin-left: 1.53em;
   vertical-align: top;
 }
 
-.vright iframe {
-  border: none;
-  overflow: hidden;
+form {
+  width: 75%;
+  marin: 0.2em auto;
 }
 
-.imgDisplay {
+label {
   display: block;
+  margin: 0.21em; 
 }
 
-.imgHidden {
+input[type] {
+  margin: 0.13em 10px;
+  width: 75%;
+  outline: none;
+  border-radius: 0.75em;
+  padding: 0.13em;
+  padding: 0.20em;
+  display: block;
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 21px;
+}
+
+input[type]:focus {
+  font-style: italic;
+  border: 2px solid pink;
+}
+
+fieldset {
+  margin: 1em 0;
+  max-width: 80%;
+}
+
+input[type=text], input[type=email] {
+  padding: 0.25em 0.5em; 
+}
+
+input[type=radio] {
+  display: none;
+  width: 150px;
+}
+
+input[type=radio] + label:before {
+  content:"";
+  display: inline-block; 
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  background: #ccc;
+  border-radius: 30px;
+/*   box-shadow: 3px 5px 6px black; */
+}
+
+input[type=radio]:checked + label:before {
+  content:"\27B2";
+  background:green;
+  text-align: center;
+  font-size: 26px;
+  line-height: 24px;
+  color: white;
+  box-shadow: 3px 4px 6px black;
+}
+
+#txtOther {
+  margin-left: 1.1em;
   display: none;
 }
 
-/*FOR IMAGE SLIDE SHOW*/ 
+
+form .vleft {
+  width: 70%;
+}
+
+form .vright {
+  width: 20%;
+}
+
+form .vright img {
+  margin: 0.75em auto;
+  display: block;
+  border-radius: 1.5em;
+  max-width: 7.5em;
+  max-height: 4.3em;
+  border: 0;
+}
+
+
+/****** FOR IMAGE SLIDE SHOW ******/ 
 .css-carousel {
    overflow: hidden;
-<<<<<<< HEAD
-   margin: 0.75em auto;
    padding: 0 3em;
-=======
-   margin: 1em auto;
+   margin: 5.5em auto 1em;
    display: block;
->>>>>>> origin/master
  }
  
 .css-carousel .css-img {
    display: block;
    margin: 0 auto;
-   border-radius: 15px;
-<<<<<<< HEAD
-   width: 85%;
-   height: 70%;
-   max-width: 90%;
-=======
-   width: 90%;
-   height: 70%;
->>>>>>> origin/master
+   border-radius: 0.5em;
+   width: 75%;
+   height: 65%;
    position: absolute;
    opacity:0;
    -webkit-animation-name: css-animation-fade;
@@ -239,32 +316,31 @@ h2 {
    box-shadow: 0 0.043em 0.87em #444;
   }
  
- 
  .css-carousel .css-img:nth-child(1) {
     -webkit-animation-delay: 2s;
     -moz-animation-delay: 2s;
     animation-delay: 2s;
   }
 
-  .css-carousel .css-img:nth-child(2) {
+.css-carousel .css-img:nth-child(2) {
     -webkit-animation-delay: 4s;
     -moz-animation-delay: 4s;
     animation-delay: 4s;
   }
  
- .css-carousel .css-img:nth-child(3) {
+.css-carousel .css-img:nth-child(3) {
     -webkit-animation-delay: 7s;
     -moz-animation-delay: 7s;
     animation-delay: 7s;
   }
   
- .css-carousel .css-img:nth-child(4) {
+.css-carousel .css-img:nth-child(4) {
     -webkit-animation-delay: 9s;
     -moz-animation-delay: 9s;
     animation-delay: 9s;
   }
   
- .css-carousel .css-img:nth-child(5) {
+.css-carousel .css-img:nth-child(5) {
     -webkit-animation-delay: 12s;
     -moz-animation-delay: 12s;
     animation-delay: 12s;
@@ -298,7 +374,8 @@ h2 {
   }
 
 
-/* ~footer layout~ */
+
+/****** ~footer layout~ ******/
 footer {
   bottom: 0;
   left: 0;
@@ -307,102 +384,91 @@ footer {
   height: 8%;
   position: fixed;
   background-color: #185E35;
-  box-shadow: 0px 1px 20px #444;
-  border-top: 4px solid #EC0786;
+  box-shadow: 0px 0.045em 0.87em #444;
+  border-top: 0.18em solid #EC0786;
   text-align: center;
   font-size: 0.73em;
   padding-bottom: 0.25em;
 }
 
-
-
-
-
-/* ~different screen size~ */
-
-@media screen and (max-width: 816px) {
-  header nav ul li a {
-  color: #CCBF5B;
-  padding: 1.09em;
-  display: block;
-  font-size: 0.82em;
-  text-decoration: none;
-}
-
+/****** diff screen ******/
+@media screen and (max-width: 848px) {
+  body{
+    font-size: 21px;
+    line-height: 1.25em;
+  }
 }
 
 @media screen and (max-width: 768px) {
- 
-}
-
-@media screen and (max-width: 480px) {
-  header {
-    height: 20%;
-    position: absolute;
-    background-color: #185E35;
-    box-shadow: 0px 1px 20px #444;
-    border-bottom: 4px solid #EC0786;
-    width: 100%;
-    margin: 0 auto;
+  body{
+    font-size: 23px;
+    line-height: 1.25em;
   }
 
-  #imgLogo {
-    max-width: 3.27em;
-    max-height: 4.5em;
-    float: left;
-    padding: 0.5em;
+  .line {
+    font-size: 1em;
+    border:1px solid #f9e42e;
+    background: #f9e42e;
+    height:3px;
+    margin-top:.25em;
+    width: 2.25em;
+  }
+
+  header {
+    width: 100%;
+    height: 5em;
+    position: static;
+    background-color: #185E35;
+    box-shadow: 0 0.043em 0.87em #444;
+    border-bottom: 0.17em;
+    padding: 0.25em;
+    margin: 0 auto 0.20em;
+    display: block;
+    /*overflow: hidden;*/
+  }
+
+  header ul {
+    transition: all 1s;
+    height:0em;
+  }
+
+  header nav {
+    width: 100%;
+    margin: 0;
+    float: none;
+    background-color: #185E35;
+    font-size: 0.75em;
+  }
+
+  .slide {
+    height: 18em;
+    background-color: #185E35;
   }
 
   #hdrNav a {
     display: block;
     font-weight: 600;
-    font-size: 1.2em;
-    padding: 0.15em 0.75em;
+    font-size:1.2em;
+    padding: 0.15em .75em;
     margin-top: 0.5em;
   }
 
   #hdrNav li:not(:first-child) {
     float: none;
-    width: 90%; /*stretch the dropdown to make it inline*/
+    width: 90%;
   }
 
   #hdrNav li:first-child {
-    display: block;
-    position: absolute;
-    top: 0.4em;
-    right: 0.25em;
+    display:block;
+    position:absolute;
+    top:0.4em;
+    right:0.25em;
   }
 
-  .line {
-    font-size: 1em;
-    background-color: #f9e42e;
-    border: 1px solid #f9e42e;
-    height: 3px;
-    width: 3em;
-    margin: 0.1em;
-  }
-
-  header ul {
-    transition: all 1s;
-    height: 0em;
-  }
-
-
-  .slide {
-    height: 20em;
-  }
-
-  header h1 {
-    margin: 25px 0 0 0;
-    float: left;
-    color: yellow;
-    font-family: 'Gochi Hand', cursive;
-    font-weight:800;
-    font-size: 1em;
-  }
-
-  footer {
-   display: none;
+  #index-Page, .css-carousel {
+    display: none;
   }
 
 }
+
+

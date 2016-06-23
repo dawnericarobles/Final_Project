@@ -1,56 +1,55 @@
 
 $(document).ready(function() {
 
-  $("liToggle").click(function(){
-      $("hdrNav").toggleClass("slide");
-  });
+  $("#Ltoggle").click(function(){
+		$("#hdrNav").toggleClass("slide");
+ 	});
 
-<<<<<<< HEAD
-  $("nav li a").click(function(){
-  	if(window.location.href.indexOf("videos") > 0) {
-       alert("link has videos");
-    } 
-    else if(window.location.href.indexOf("breeds") > 0) {
-       alert("link has breeds");
-    }
 
-    // event.preventDefault();
-  });
+  // $("nav li a").click(function(){
+  // 	if(window.location.href.indexOf("videos") > 0) {
+  //      alert("link has videos");
+  //   } 
+  //   else if(window.location.href.indexOf("breeds") > 0) {
+  //      alert("link has breeds");
+  //   }
+
+  //   event.preventDefault();
+  // });
   
 
-
-=======
-
-  $("#aVid").click(function(){
+  $("#aVideos").click(function(){
 	  // if (window.location.href.indexOf("videos") > -1) {
 	  // 	console.log("found video on link");
 	  // }
+	  $("#blankx").css("display", "block");
 	  $("#videos").show();
 	  $("#breeds").hide();
-	  $("#contactUs").hide();
-	  $("#aboutUs").hide();
+	  $("#contact").hide();
+	  $("#about").hide();
   });
-  $("#aBreed").click(function(){
+  $("#aBreeds").click(function(){
   	  $("#videos").hide();
 	  $("#breeds").show();
-	  $("#contactUs").hide();
-	  $("#aboutUs").hide();
+	  $("#contact").hide();
+	  $("#about").hide();
   });
   $("#aContact").click(function(){
   	  $("#videos").hide();
 	  $("#breeds").hide();
-	  $("#contactUs").show();
-	  $("#aboutUs").hide();
+	  $("#contact").show();
+	  $("#about").hide();
   });
-  $("#aboutUs").click(function(){
+  $("#aAbout").click(function(){
+  	  $(".spacer").css("height", "6em");
   	  $("#videos").hide();
 	  $("#breeds").hide();
-	  $("#contactUs").hide();
-	  $("#aboutUs").show();
+	  $("#contact").hide();
+	  $("#about").show();
   });
 
+
 // ~POPULATE DROPDOWN ON PAGE LOAD~
->>>>>>> origin/master
   	var tmpVideolists = [];
   	tmpVideolists.push("Bulldogs vs Plastic Bag");
   	tmpVideolists.push("Chowchow learning how to swim");
@@ -77,6 +76,16 @@ $(document).ready(function() {
 		$('#dog-type').append($("<option></option>").attr("value",i+1).text(tempBreed));
 	}
 // ~END POPULATE DROPDOWN ON PAGE LOAD~
+
+	$("input[type='radio']").on('change', function() {
+		var selrdoBtn = $("input[name='rdoBtn']:checked").val();
+		if(selrdoBtn == "other"){
+			$("#txtOther").show();
+		} else {
+			$("#txtOther").hide();
+		}
+	});
+	
 
 
 	$("#ddVideos").change(displayVideo);
