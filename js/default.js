@@ -4,6 +4,19 @@ $(document).ready(function() {
       $("hdrNav").toggleClass("slide");
   });
 
+  $("nav li a").click(function(){
+  	if(window.location.href.indexOf("videos") > 0) {
+       alert("link has videos");
+    } 
+    else if(window.location.href.indexOf("breeds") > 0) {
+       alert("link has breeds");
+    }
+
+    // event.preventDefault();
+  });
+  
+
+
   	var tmpVideolists = [];
   	tmpVideolists.push("Bulldogs vs Plastic Bag");
   	tmpVideolists.push("Chowchow learning how to swim");
@@ -84,6 +97,8 @@ $(document).ready(function() {
 
 		if (breed != "0") {
 			$("#imgDog").attr("src", tempBreed);
+		} else {
+			$("#imgDog").attr("src", "../images/bg.png");
 		}
 
 		console.log(tempBreed);
