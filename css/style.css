@@ -433,8 +433,10 @@ footer {
 
 /****** diff screen ******/
 @media screen and (max-width: 848px) {
+  html { width: 100%; }
+
   body{
-    font-size: 21px;
+    font-size: 22px;
     line-height: 1.25em;
   }
 
@@ -443,13 +445,13 @@ footer {
     marin: 0.2em auto;
   }
 
-  form .vleft {
+  .vleft {
     width: 90%;
     float: none;
     display: inline-block;
   }
 
-  form .vright {
+  .vright {
     width: 90%;
     float: none;
   }
@@ -470,6 +472,8 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  html { width: 100%; }
+
   body{
     font-size: 23px;
     line-height: 1.25em;
@@ -541,6 +545,34 @@ footer {
 
   footer {
     display: none;
+  }
+
+  .vleft {
+    width: 90%;
+    float: none;
+    display: inline-block;
+  }
+
+  .vright {
+    width: 90%;
+    float: none;
+  }
+
+  select {
+    max-width: 220px;
+  }
+
+  select > option {
+     max-width: 220px;
+  }
+
+  #index-Page, #videos, #breeds, #contact, #about {
+    height: inherit;
+    font-size: 18px;
+  }
+
+  #imgDog {
+    max-width: 300px;
   }
 
 }
