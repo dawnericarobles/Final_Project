@@ -24,6 +24,31 @@ if (window.location.href.indexOf("default") > -1) {
   	// console.log("IN MOBILE!");
   }
 }
+
+//if it is mobile, then allow scrolling and lessen the spaces
+if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	var divs = ["#videos", "#breeds", "#contact", "#about"];
+	for (var i = 0; i < divs.length; i++) {
+		$(divs[i]).css("display", "block");
+		$(divs[i]).css("padding-top", "2em");
+		//console.log(divs[i]);
+	}
+	$(".spacer").css("display", "none");
+	$("iframe").attr("width", "85%");
+	$("iframe").attr("height", "80%");	
+	$("iframe").css("margin-top", "1em");	
+} else {
+	$("iframe").attr("width", "400");
+	$("iframe").attr("height", "450");
+}
+
+
+
+//resizing of the iframe for diff screens
+$(window).resize(function() {
+    $("iframe").height($("#middle").height());
+});
+
   
 // ~POPULATE DROPDOWN ON PAGE LOAD~
   	var tmpVideolists = [];
@@ -78,31 +103,31 @@ if (window.location.href.indexOf("default") > -1) {
 
 
 		if (video == "1") {  //change it appropriate iframe src
-			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fawvvhouse%2Fvideos%2F516961521840889%2F&show_text=0&width=400");
+			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fawvvhouse%2Fvideos%2F516961521840889%2F&show_text=0");
 		} 
 		else if (video == "2") {  
-			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FAwwstation%2Fvideos%2F1761859490699692%2F&show_text=0&width=400");
+			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FAwwstation%2Fvideos%2F1761859490699692%2F&show_text=0");
 		} 
 		else if (video == "3") {  
 			$("#vid1").attr("src","https://www.youtube.com/embed/gHh1oogfdO8");
 		} 
 		else if (video == "4") { 
-			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fawsmanimals%2Fvideos%2F705110626295493%2F&show_text=0&width=400");
+			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fawsmanimals%2Fvideos%2F705110626295493%2F&show_text=0");
 		} 
 		else if (video == "5") {  
-			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fboompanotdotcom%2Fvideos%2Fvb.710790405624453%2F712519555451538%2F%3Ftype%3D3&show_text=0&width=400");
+			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fboompanotdotcom%2Fvideos%2Fvb.710790405624453%2F712519555451538%2F%3Ftype%3D3&show_text=0");
 		} 
 		else if (video == "6") {  
-			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fitsdougthepug%2Fvideos%2F1048382168579942%2F&show_text=0&width=400");
+			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fitsdougthepug%2Fvideos%2F1048382168579942%2F&show_text=0");
 		} 
 		else if (video == "7") {  
-			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fitsdougthepug%2Fvideos%2F947413032010190%2F&show_text=0&width=400");
+			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fitsdougthepug%2Fvideos%2F947413032010190%2F&show_text=0");
 		} 
 		else if (video == "8") { 
-			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fitsdougthepug%2Fvideos%2F1085139598237532%2F&show_text=0&width=400");
+			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fitsdougthepug%2Fvideos%2F1085139598237532%2F&show_text=0");
 		} 
 		else if (video == "9") { 
-			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FBuzzFeedAnimals%2Fvideos%2F1232887433399916%2F&show_text=0&width=400");
+			$("#vid1").attr("src","https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FBuzzFeedAnimals%2Fvideos%2F1232887433399916%2F&show_text=0");
 		} 
 		else if (video == "10") { 
 			$("#vid1").attr("src","https://www.youtube.com/embed/g-OFG1ABav8");

@@ -187,6 +187,7 @@ select > option:first-child {
   border: 0.045em solid #8EB09C;
   padding: 0 1.25em 0.75em;
   background: #55896B;
+  margin: 0 0.5em;
 }
 
 #videos, #breeds, #contact {
@@ -195,7 +196,7 @@ select > option:first-child {
 }
 
 #about {
-  padding-top: 4em;
+  padding-top: 4.5em;
   padding-bottom: 4em;
   display: none;
 }
@@ -205,7 +206,7 @@ select > option:first-child {
   margin: 0.75em;
   max-width: 350px;
   border-radius: 0.43em;
-  /*position: relative;*/
+  position: relative;
 }
 
 .vleft {
@@ -321,9 +322,6 @@ section#breeds p span {
   text-decoration: underline;
 }
 
-section#breeds img {
-  position: relative;
-}
 
 
 
@@ -331,7 +329,7 @@ section#breeds img {
 .css-carousel {
    overflow: hidden;
    padding: 0 3em;
-   margin: 5.5em auto 1em;
+   margin: 4.5em auto 1em;
    display: block;
  }
  
@@ -543,9 +541,25 @@ footer {
     display: none;
   }
 
-  footer {
-    display: none;
+  section#breeds img {
+    width: 90%;
+    height: 80%;
   }
+
+
+  footer {
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  position: inherit;
+  background-color: #185E35;
+  box-shadow: 0px 0.045em 0.87em #444;
+  border-top: 0.18em solid #EC0786;
+  text-align: center;
+  font-size: 0.73em;
+  line-height: 0.75em;
+}
 
   .vleft {
     width: 90%;
@@ -564,8 +578,22 @@ footer {
 
   select > option {
      max-width: 220px;
+     font-size: 12px;
   }
 
+  iframe {
+    border: none;
+    overflow: hidden;
+    max-height: 380px;
+    vertical-align: top;
+    border-radius: 2em;
+    padding: 0.025em;
+  }
+
+/*  ._53mw {
+    width: 70%;
+  }
+*/
   #index-Page, #videos, #breeds, #contact, #about {
     height: inherit;
     font-size: 18px;
@@ -576,5 +604,4 @@ footer {
   }
 
 }
-
 
