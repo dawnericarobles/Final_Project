@@ -9,10 +9,6 @@ $(document).ready(function() {
   // if (window.location.href.indexOf("videos") > -1) {
   // 	console.log("found video on link");
   // }
-  $("#aVideos").click(VidPage);
-  $("#aBreeds").click(BrdPage);
-  $("#aContact").click(ContPage);
-  $("#aAbout").click(AbtPage);
   
 
 //this is to avoid the error.. making sure to ONLY do this on default page
@@ -31,11 +27,18 @@ if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
 		$(divs[i]).css("padding-top", "2em");
 		//console.log(divs[i]);
 	}
-	$(".spacer").css("display", "none");
+	$("#ftrSpace").css("display", "none");
 	$("iframe").attr("width", "85%");
 	$("iframe").attr("height", "80%");	
-	$("iframe").css("margin-top", "1em");	
+	$("iframe").css("margin-top", "1em");
+	$(".imgDisplay").css("margin-top", "6.25em");	
 } else {
+
+	$("#aVideos").click(VidPage);
+	$("#aBreeds").click(BrdPage);
+	$("#aContact").click(ContPage);
+	$("#aAbout").click(AbtPage);
+
 	$("iframe").attr("width", "400");
 	$("iframe").attr("height", "450");
 }
