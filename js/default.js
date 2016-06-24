@@ -19,8 +19,6 @@ $(document).ready(function() {
 if (window.location.href.indexOf("default") > -1) { 
   if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   	imgHolder.className = "imgDisplay";
-  	imgHolder.style.width = "300px";
-  	imgHolder.style.margin = "1em auto";
   	// console.log("IN MOBILE!");
   }
 }
@@ -273,6 +271,8 @@ $(window).resize(function() {
 		$("#blankx").css("height", "3.75em");
 		$("#index-Page").css("display", "none");
 		$(".css-carousel").css("display", "none");
+		$("#ftrSpace").css("height", "4em");
+
 	}
 
 });

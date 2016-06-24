@@ -424,8 +424,12 @@ footer {
   box-shadow: 0px 0.045em 0.87em #444;
   border-top: 0.18em solid #EC0786;
   text-align: center;
-  font-size: 0.73em;
+  font-size: 0.6em;
   padding-bottom: 0.25em;
+}
+
+footer p {
+  margin: 0.2em auto;
 }
 
 
@@ -467,6 +471,19 @@ footer {
   .css-carousel .css-img {
     max-height: 55%;
   }
+
+  footer {
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    position: inherit;
+    background-color: #185E35;
+    box-shadow: 0px 0.045em 0.87em #444;
+    border-top: 0.18em solid #EC0786;
+    text-align: center;
+    font-size: 0.6em;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -475,6 +492,10 @@ footer {
   body{
     font-size: 23px;
     line-height: 1.25em;
+  }
+
+  nav {
+    
   }
 
   .line {
@@ -489,7 +510,7 @@ footer {
   header {
     width: 100%;
     height: 5em;
-    position: static;
+    position: relative;
     background-color: #185E35;
     box-shadow: 0 0.043em 0.87em #444;
     border-bottom: 0.17em;
@@ -546,6 +567,11 @@ footer {
     height: 80%;
   }
 
+  #imgHolder{
+    width: 90%;
+    margin: 1em auto;
+    z-index: 1;
+  }
 
   footer {
   width: 100%;
@@ -557,8 +583,7 @@ footer {
   box-shadow: 0px 0.045em 0.87em #444;
   border-top: 0.18em solid #EC0786;
   text-align: center;
-  font-size: 0.73em;
-  line-height: 0.75em;
+  font-size: 0.6em;
 }
 
   .vleft {
@@ -590,10 +615,6 @@ footer {
     padding: 0.025em;
   }
 
-/*  ._53mw {
-    width: 70%;
-  }
-*/
   #index-Page, #videos, #breeds, #contact, #about {
     height: inherit;
     font-size: 18px;
